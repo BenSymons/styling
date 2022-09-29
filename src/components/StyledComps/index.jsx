@@ -1,4 +1,4 @@
-import StyledContainer from "../TradContainer"
+import StyledContainer from "../StyledContainer"
 
 const StyledComps = () => {
     return (
