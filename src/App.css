@@ -1,0 +1,28 @@
+.App {
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: rgb(55, 125, 255);
+}
+
+nav > * {
+  border: 3px solid lightblue;
+  padding: 8px;
+  margin: 0px;
+  background-color: aliceblue;
+  align-self: center;
+  height: 100%
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav :hover {
+  cursor: pointer;
+}
