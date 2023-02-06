@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Styling React Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the lecture, we learned about three different ways of styling React components; traditional CSS, CSS modules and styled components. Your task is to style the three different containers with each different method of applying CSS. The CSS for each of these containers should be independent of each other.
 
-## Available Scripts
+# Challenge 1
 
-In the project directory, you can run:
+If you re-size the window using inspect mode, you will see that the app is not responsive. One of the main problems are the buttons in the header which bunch together for small screen size. See if you can adjust the CSS to make the responsive by adjusting the CSS. Try using a media query or the flex-wrap property to help you.
 
-### `npm start`
+# Challenge 2 (hard)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The endpoint we are hitting for each container returns a list of pokemon. For each pokemon we receive an object with a name, and a url. For example:
+```js
+{
+    name: "charmander",
+    url: "https://pokeapi.co/api/v2/pokemon/4"
+}
+```
+When you hit that url, you will get an object with lots of info about that pokemon including sprites (small pixellated pictures).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your task is to create an image in the pokemon card that appears when your mouse hovers over the card. Here are some steps to help you:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Create two states in the container: selected, and image
+2. Add a `onMouseOver` property to the div containing the pokemon that sets the `selected` state to the url for the pokemon. This should be `thisPokemon.pokemon.url`
+3. Create another `useEffect` in the container that hits the url in the `selected` state. Then in the `.then` block, set the image for that pokemon. This should be `res.data.sprites.front_default`
+4. Render the image in the same div that displays the name of the pokemon but only have the image render if the pokemon you are hovering over is the same as the selected pokemon.
+5. Style the image so that it appears above or below the card without mocing any of the other pokemon divs out of the way.

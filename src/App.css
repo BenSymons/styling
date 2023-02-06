@@ -26,13 +26,3 @@ a {
 nav :hover {
   cursor: pointer;
 }
-
-.pokeball {
-  width: 50%;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.4;
-  z-index: -5
-}
