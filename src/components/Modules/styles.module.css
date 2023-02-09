@@ -1,0 +1,16 @@
+.moduleContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+}
+
+.moduleCard {
+    border: 1px solid black;
+    padding: 3px;
+    margin: 2px;
+    background-color: aqua;
+}
+
+.tradContainer {
+    display: flex;
+    background-color: pink;
+}

@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import axios from "axios"
+import styles from "./Modules/styles.module.css"
 
 const ModulesContainer = () => {
     const [pokemon, setPokemon] = useState([])
@@ -11,13 +12,15 @@ const ModulesContainer = () => {
     return (
         <div>
             <h1>Water Types!</h1>
-            {pokemon.map((thisPokemon) => {
-                return (
-                    <div>
-                        {thisPokemon.pokemon.name}
-                    </div>
-                )
-            })}
+            <div className={styles.tradContainer}>
+                {pokemon.map((thisPokemon) => {
+                    return (
+                        <div className={styles.moduleCard}>
+                            {thisPokemon.pokemon.name}
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

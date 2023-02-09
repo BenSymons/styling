@@ -8,6 +8,11 @@ import StyledComps from "./components/StyledComps";
 function App() {
   return (
     <div className="App">
+      <img 
+        src="/pokeball.png" 
+        alt="pokeball"
+        className="pokeball"
+      />
       <BrowserRouter>
         <NavBar />
         <Routes>
