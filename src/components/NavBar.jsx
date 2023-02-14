@@ -16,6 +16,9 @@ const NavBar = () => {
             <div onClick={() => handleClick("/styled_components")}>
                 <p>Styled Components</p>
             </div>
+            <div onClick={() => handleClick("/sass")}>
+                <p>Sass</p>
+            </div>
         </nav>
     )
 }

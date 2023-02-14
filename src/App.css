@@ -26,3 +26,21 @@ a {
 nav :hover {
   cursor: pointer;
 }
+
+.trad-container {
+  background-color: rgb(255, 164, 164);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.trad-card {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 3px;
+  background-color: rgb(255, 255, 222);
+}
+
+.title {
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+$pika: #f8ffb1;
+$night: #383838;
+
+@function change-text-color ($color) {
+    @if(lightness($color) > 60) {
+        @return black;
+    } @else {
+        @return white;
+    }
+}

@@ -1,0 +1,18 @@
+@import "config";
+$darker: darken($pika, 10%);
+
+.sass-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $pika;
+    .card {
+        padding: 5px;
+        margin: 5px;
+        background-color: $darker;
+        color: change-text-color($darker);
+        &:hover {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import ModulesContainer from "../ModulesContainer"
+import ModulesContainer from "./ModulesContainer"
 
 const Modules = () => {
     return (
